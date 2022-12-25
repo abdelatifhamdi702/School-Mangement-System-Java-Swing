@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="شهادة_مدرسية" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8967b1c4-abf5-4064-98c9-d06bb2b811ee">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Data Adapter "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from  ecole.etudiant]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etudiant"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nom" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nom"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nom"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etudiant"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prénom" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Prénom"/>
+		<property name="com.jaspersoft.studio.field.label" value="Prénom"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etudiant"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DateN" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="DateN"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateN"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etudiant"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Niveau" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Niveau"/>
+		<property name="com.jaspersoft.studio.field.label" value="Niveau"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etudiant"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="187" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="130" width="330" height="50" uuid="e31be915-b67a-47ca-a4c6-555d3bcd780e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Microsoft Sans Serif" size="40" isBold="false"/>
+				</textElement>
+				<text><![CDATA[شهادة مدرسية]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="70" width="240" height="50" uuid="a659e929-4a8e-4eb8-80dc-5542809115c8"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[مديرية التربية
+ولاية : الأغواط]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="9" width="560" height="50" uuid="1ea06c2c-505a-4755-8e80-24bd3b02559c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الجمهورية الجزائرية الديمقراطية الشعبية
+وزارة التربية الوطنية]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="615" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="20" width="570" height="30" uuid="202d506c-ae15-4469-a5b6-f51c371ee380"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[يشهد مدير(ة) المؤسسة أن التلميذ(ة) : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="80" width="100" height="30" uuid="b6468fda-5faa-4ee1-9b24-3aa0269afc3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الإسم : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="130" width="100" height="30" uuid="7f80d47c-3c61-406e-9b11-08ea53c59e00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Nom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="130" width="100" height="30" uuid="37abda78-451e-4cc5-adf8-72214404c87e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[اللقب : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="352" y="80" width="100" height="30" uuid="ac8cab80-2606-4ee9-bf3a-7d1dfb4724d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Prénom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="180" width="100" height="30" uuid="a293975d-ba61-481d-84b3-3aa4ca65ff12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[المولود بتاريخ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="280" width="100" height="30" uuid="127ade2e-28aa-4bce-8c3e-867661a36043"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[بالقسم : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="280" width="100" height="30" uuid="d6742db7-c221-4674-af43-a3cc98035783"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Niveau}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="230" width="550" height="30" uuid="e529f6fe-128b-48cf-a01f-67a00e5d1c6e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[يتابع دروسه خلال السنة الدراسية : 2020/2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="330" width="100" height="30" uuid="4bda4ae3-5bee-4f20-962b-79878faa5aea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[رقم التسجيل : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="352" y="330" width="100" height="30" uuid="8c884192-885b-41ed-b243-9db92bf348de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="390" width="550" height="30" uuid="b9cf6055-04ed-40cd-b763-5305a57f6dfa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الى غاية يومنا هذا]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="460" width="100" height="30" uuid="96ecec8d-8b91-4dbe-8365-e22c668f6aff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[حرر بتاريخ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="490" width="100" height="30" uuid="40216fdb-8f8f-44c3-ae79-fe0304fd5155"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[المدير]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="180" width="100" height="30" uuid="4c74b23f-c4e7-4616-8066-fbba4f5a88e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DateN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
